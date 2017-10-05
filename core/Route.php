@@ -30,12 +30,8 @@ class Route
 
     public function direct($uri, $requestType)
     {
-        // die(var_dump($uri, $requestType));
 
         if( array_key_exists($uri, $this->routes[$requestType])){
-            // return $this->routes[$requestType][$uri];
-
-            // PagesController@home
             // die($this->routes[$requestType][$uri]);
             
             return $this->callAction(
@@ -48,10 +44,10 @@ class Route
 
     protected function callAction($controller, $action)
     {
-        // die(var_dump($controller,$action));
-
+        
         $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
+        // die(var_dump($controller,$action));
         
         if(!method_exists($controller, $action)){
             throw new Exception (

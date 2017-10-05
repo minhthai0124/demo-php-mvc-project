@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 
 require 'core/boostrap.php';
 
-// use App\Core\{Route, Request};
+// or use App\Core\{Route, Request};
 use App\Core\Route;
 use App\Core\Request;
 
