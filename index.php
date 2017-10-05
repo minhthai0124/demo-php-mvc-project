@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 require 'vendor/autoload.php';
 
 require 'core/boostrap.php';
