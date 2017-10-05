@@ -1,14 +1,14 @@
 <?php
 
-// require 'vendor/autoload.php';
+ob_start();
 
-// require 'core/boostrap.php';
+require 'vendor/autoload.php';
 
-// // or use App\Core\{Route, Request};
-// use App\Core\Route;
-// use App\Core\Request;
+require 'core/boostrap.php';
 
-// Route::load('app/routes.php')
-//     ->direct(Request::uri(), Request::method());
+// or use App\Core\{Route, Request};
+use App\Core\Route;
+use App\Core\Request;
 
-echo "hello";
+Route::load('app/routes.php')
+    ->direct(Request::uri(), Request::method());
